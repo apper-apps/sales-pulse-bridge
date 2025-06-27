@@ -1,10 +1,9 @@
 import React from 'react'
-import '@/node_modules/react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css'
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { ToastContainer } from 'react-toastify'
 import Dashboard from '@/components/pages/Dashboard'
 import Layout from '@/components/organisms/Layout'
-
 // Error Boundary Component
 class ErrorBoundary extends React.Component {
   constructor(props) {
