@@ -1,19 +1,18 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { ToastContainer } from 'react-toastify'
-import Dashboard from '@/components/pages/Dashboard'
-import Layout from '@/components/organisms/Layout'
+import 'react-toastify/dist/ReactToastify.css'
+import React from "react";
+import { Route, Router, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import Dashboard from "@/components/pages/Dashboard";
+import Layout from "@/components/organisms/Layout";
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/dashboard" element={<Dashboard />} />
-          </Routes>
-        </Layout>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Routes>
         <ToastContainer
           position="top-right"
           autoClose={3000}
@@ -27,7 +26,7 @@ function App() {
           theme="light"
           className="z-50"
         />
-      </div>
+      </Layout>
     </Router>
   )
 }
